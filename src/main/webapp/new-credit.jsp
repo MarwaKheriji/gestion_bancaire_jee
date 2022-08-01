@@ -50,7 +50,7 @@
 	  <div class="form-group row mb-3">
 	    <label class="col-sm-2 col-form-label">Mensualité : </label>
 	    <div class="col-sm-4">
-	      <input type="text" class="form-control" name="mensualite">
+	      <input readOnly="readonly" type="text" class="form-control" name="mensualite">
 	    </div>
 	  </div>
 	  

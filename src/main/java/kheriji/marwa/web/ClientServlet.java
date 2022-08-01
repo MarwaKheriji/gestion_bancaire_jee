@@ -167,11 +167,13 @@ public class ClientServlet extends HttpServlet {
 				double capital = Double.parseDouble( request.getParameter("capital"));
 				int duree = Integer.parseInt( request.getParameter("duree"));
 				double tauxCredit = Double.parseDouble( request.getParameter("taux"));
-				double mensualite =  Double.parseDouble(request.getParameter("mensualite"));
+				//double mensualite =  Double.parseDouble(request.getParameter("mensualite"));
 				String etat =  request.getParameter("etat");
 				int idcl = Integer.parseInt(request.getParameter("idclient")) ;
-				c = cdi.find(idcl);
-				credit= new DemandeCredit(numero, Date.valueOf(dateCredit), capital, duree, tauxCredit, mensualite, etat, c);
+				c = cdi.find(idcl);		
+				double m=( ((capital*tauxCredit)/12) / (1-Math.pow(1+(tauxCredit/12), -duree)) );
+				credit= new DemandeCredit(numero, Date.valueOf(dateCredit), capital, duree, tauxCredit, m, etat, c);
+				credit.setMensualite(m);
 				credit=creditImpl.save(credit);
 				System.out.println(credit);
 				
@@ -198,7 +200,7 @@ public class ClientServlet extends HttpServlet {
 				 capital = Double.parseDouble( request.getParameter("capital"));
 				 duree = Integer.parseInt( request.getParameter("duree"));
 				 tauxCredit = Double.parseDouble( request.getParameter("taux"));
-				 mensualite =  Double.parseDouble(request.getParameter("mensualite"));
+				 //mensualite =  Double.parseDouble(request.getParameter("mensualite"));
 				 etat =  request.getParameter("etat");
 				 idcl = Integer.parseInt(request.getParameter("idclient")) ;
 				

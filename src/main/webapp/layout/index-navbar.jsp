@@ -5,10 +5,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="liste-credit?idclient=${param.idclient }">Liste Credit</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="new-credit">Nouvelle demande</a>
+        <a class="nav-link" href="liste-client">Liste Client</a>
       </li>
     </ul>
   </div>

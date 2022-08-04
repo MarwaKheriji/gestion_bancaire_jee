@@ -174,6 +174,8 @@ public class ClientServlet extends HttpServlet {
 				double m=( ((capital*tauxCredit)/12) / (1-Math.pow(1+(tauxCredit/12), -duree)) );
 				credit= new DemandeCredit(numero, Date.valueOf(dateCredit), capital, duree, tauxCredit, m, etat, c);
 				credit.setMensualite(m);
+				System.out.println("mensualite : " + m);
+				System.out.println("client " + credit);
 				credit=creditImpl.save(credit);
 				System.out.println(credit);
 				

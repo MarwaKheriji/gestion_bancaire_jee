@@ -31,6 +31,7 @@ public class DemandeCreditDaoImpl implements IDemandeCreditDao{
 					+ "mensualite,"
 					+ "etat,"
 					+ "idclient) values(?,?,?,?,?,?,?,?)");
+			System.out.println("... " + demande);
 			
 			cps.setString(1, demande.getNum());
 			cps.setDate(2, demande.getDate());

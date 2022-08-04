@@ -77,14 +77,17 @@
 				</div>
 
 			</div>
-
+			
+			
 			<div class="form-group row mb-3">
 				<label class="col-sm-2 col-form-label">Id du client :  </label>
+				
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="idclient">
+					<input type="text" class="form-control " readOnly="readonly" name="idclient" value= "<%= request.getParameter("idclient")%>" >
+					
 				</div>
-			</div>
-
+				
+			</div> 
 			<button type="submit" class="btn btn-primary mb-2">Enregistrer</button>
 		</form>
 

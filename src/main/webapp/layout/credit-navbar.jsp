@@ -8,7 +8,7 @@
         <a class="nav-link" href="liste-credit?idclient=${param.idclient }">Liste Credit</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="new-credit">Nouvelle demande</a>
+        <a class="nav-link" href="new-credit?idclient=${param.idclient }">Nouvelle demande</a>
       </li>
     </ul>
   </div>

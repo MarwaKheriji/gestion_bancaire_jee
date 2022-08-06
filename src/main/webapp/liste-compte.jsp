@@ -67,7 +67,6 @@
 	      <td>${c.getDecouvert() }</td>
 	      <td>${c.getClient().getId() }</td>
 	      <td><a href="delete-compte?num=${c.getNum() }">Supprimer</a></td>
-	      <td><a href="edit-compte?num=${c.getNum() }">Modifier</a></td>
 	      
     </tr>  
   

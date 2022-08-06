@@ -9,7 +9,7 @@ public class DemandeCredit {
 	private double capital;
 	private int duree;
 	private double taux;
-	private double mensualite;
+	private Double mensualite;
 	private String etat;
 	private Client client;
 	
@@ -20,7 +20,7 @@ public class DemandeCredit {
 
 
 
-	public DemandeCredit(String num, Date date, double capital, int duree, double taux, double mensualite, String etat,
+	public DemandeCredit(String num, Date date, double capital, int duree, double taux, Double mensualite, String etat,
 			Client client) {
 		this.num = num;
 		this.date = date;
@@ -94,13 +94,13 @@ public class DemandeCredit {
 
 
 
-	public double getMensualite() {
+	public Double getMensualite() {
 		return mensualite;
 	}
 
 
 
-	public void setMensualite(double mensualite) {
+	public void setMensualite(Double mensualite) {
 		this.mensualite = mensualite;
 	}
 

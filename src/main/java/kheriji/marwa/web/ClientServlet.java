@@ -131,12 +131,6 @@ public class ClientServlet extends HttpServlet {
 			case "/new-compte":
 				request.getRequestDispatcher("new-compte.jsp").forward(request,response);
 			break;
-
-			
-			case "/edit-compte":
-				
-				
-			break;
 			
 			case "/delete-compte":
 				num = request.getParameter("num");
@@ -176,7 +170,13 @@ public class ClientServlet extends HttpServlet {
 				credit.setMensualite(m);
 				System.out.println("mensualite : " + m);
 				System.out.println("client " + credit);
+				System.out.println(request.getParameter("mensualite"));
+				DemandeCredit demandeCreditSaved=null;
+				demandeCreditSaved=creditImpl.find(request.getParameter("num"));
+				if(demandeCreditSaved==null)
 				credit=creditImpl.save(credit);
+				else
+					credit=creditImpl.update(credit);
 				System.out.println(credit);
 				
 				request.setAttribute("credits", credit);
@@ -195,6 +195,16 @@ public class ClientServlet extends HttpServlet {
 				response.sendRedirect("liste-credit?idclient="+credit.getClient().getId());
 			break;
 
+			
+			case "/edit-credit":
+				numero = request.getParameter("num");
+				credit = creditImpl.find(numero) ;
+				System.out.println(credit);
+				
+				request.setAttribute("credit", credit);
+				request.getRequestDispatcher("edit-credit.jsp").forward(request,response);
+				
+			break;
 			
 			case"/update-Demande":
 				 numero = request.getParameter("num");

@@ -8,7 +8,7 @@
         <a class="nav-link" href="liste-compte?idclient=${param.idclient }">Liste Compte</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="new-compte">Nouveau Compte</a>
+        <a class="nav-link" href="new-compte?idclient=${param.idclient }">Nouveau Compte</a>
       </li>
     </ul>
   </div>

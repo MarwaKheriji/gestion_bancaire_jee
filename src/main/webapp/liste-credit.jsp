@@ -50,7 +50,7 @@
 	      <td>${c.getDuree()}</td>
 	      <td>${c.getTaux()}</td>
 	      <td>${c.getMensualite()}</td>
-	      <td>${c.getEtat()} </td>
+	      <td style= color:blue >${c.getEtat()}</td>
 	      <td>${c.getClient().getId() }</td>
 	      <td><a href="delete-credit?num=${c.getNum() }">Supprimer</a></td>
 	      <td><a href="edit-credit?num=${c.getNum() }">Modifier</a></td>

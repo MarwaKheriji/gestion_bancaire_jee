@@ -13,40 +13,39 @@
 	<div class="container">
 		<h4 class="mt-4">Modification crédit</h4>
 	
-			<h1>${credit.getNum() }</h1>
 		<form method="post" action="save-credit">
 			<div class="form-group row mb-3">
 				<label class="col-sm-2 col-form-label">Numéro de crédit : </label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="num" value="${credit.getNum() }">
+					<input type="text" readOnly="readonly" class="form-control" name="num" value="${credit.getNum() }">
 				</div>
 			</div>
 
 			<div class="form-group row mb-3">
 				<label class="col-sm-2 col-form-label">Date de demande : </label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="date">
+					<input type="text" readOnly="readonly" class="form-control" name="date" value="${credit.getDate() }">
 				</div>
 			</div>
 
 			<div class="form-group row mb-3">
 				<label class="col-sm-2 col-form-label">Capital : </label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="capital">
+					<input type="text" readOnly="readonly" class="form-control" name="capital" value="${credit.getCapital() }">
 				</div>
 			</div>
 
 			<div class="form-group row mb-3">
 				<label class="col-sm-2 col-form-label">Durée : </label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="duree">
+					<input type="text" readOnly="readonly" class="form-control" name="duree" value="${credit.getDuree() }">
 				</div>
 			</div>
 
 			<div class="form-group row mb-3">
 				<label class="col-sm-2 col-form-label">Taux : </label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="taux">
+					<input type="text" readOnly="readonly" class="form-control" name="taux" value="${credit.getTaux() }">
 				</div>
 			</div>
 
@@ -54,16 +53,9 @@
 				<label class="col-sm-2 col-form-label">Mensualité : </label>
 				<div class="col-sm-4">
 					<input readOnly="readonly" type="text" class="form-control"
-						name="mensualite">
+						name="mensualite" value="${credit.getMensualite() }">
 				</div>
 			</div>
-
-			<!-- 			<div class="form-group row mb-3"> -->
-			<!-- 				<label class="col-sm-2 col-form-label">Etat : </label> -->
-			<!-- 				<div class="col-sm-4"> -->
-			<!-- 					<input type="text" class="form-control" name="etat"> -->
-			<!-- 				</div> -->
-			<!-- 			</div> -->
 
 			<div class="form-group row mb-3">
 				<label class="col-sm-2 col-form-label">Etat : </label>
@@ -89,7 +81,7 @@
 				</div>
 				
 			</div> 
-			<button type="submit" class="btn btn-primary mb-2">Enregistrer</button>
+			<button type="submit" class="btn btn-primary mb-2">Modifier</button>
 		</form>
 
 	</div>

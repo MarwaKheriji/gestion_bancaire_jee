@@ -12,9 +12,29 @@ public class DemandeCredit {
 	private Double mensualite;
 	private String etat;
 	private Client client;
+	private String color;
 	
 	
 	
+	
+	
+	public String getColor() {
+		if(this.etat.equals("en attente"))
+		return "grey";
+		
+		else if(this.etat.equals("acceptee"))
+			return "green";
+		else
+			return "red";
+		
+	}
+
+
+
+
+
+
+
 	public DemandeCredit() {
 	}
 
